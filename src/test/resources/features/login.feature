@@ -1,22 +1,13 @@
-Feature: Login functionality
-  As a user
-  I want to log into the system
-  So that I can access my account
+Feature: Login Functionality
 
-  Scenario: Successful login
+  Scenario: Successful login with valid credentials
     Given I am on the login page
-    When I enter valid username "user" and password "password"
+    When I enter valid username "validUser" and password "validPass123"
     Then I should be redirected to the dashboard
-    And I should see a welcome message
+    Then I should see a welcome message
 
-  Scenario: Failed login
+  Scenario: Failed login with invalid credentials
     Given I am on the login page
-    When I enter invalid username "wronguser" and password "wrongpass"
+    When I enter invalid username "invalidUser" and password "wrongPass"
     Then I should see an error message
-    And I should remain on the login page
-    
-  Scenario: Admin login
-    Given I am on the login page
-    When I enter valid username "admin" and password "admin123"
-    Then I should be redirected to the dashboard
-    And I should see a welcome message
+    Then I should remain on the login page

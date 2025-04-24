@@ -8,9 +8,8 @@ public class Loginserver {
     private boolean loggedIn;
     private String currentUser;
 
-    public LoginService() {
+    public Loginserver() {
         validUsers = new HashMap<>();
-        // Predefined users for testing
         validUsers.put("user", "password");
         validUsers.put("admin", "admin123");
         loggedIn = false;
@@ -38,5 +37,4 @@ public class Loginserver {
         loggedIn = false;
         currentUser = null;
     }
-
 }
